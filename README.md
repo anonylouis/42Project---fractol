@@ -28,3 +28,5 @@ Choose **[color]** between :
 
 ---
 The graphics librairy used is the [minilibx](https://github.com/42Paris/minilibx-linux)
+
+The original subject from 42 Paris is [en.subject.pdf](https://github.com/anonylouis/42Project---fractol/blob/main/en.subject.pdf)
