@@ -26,6 +26,13 @@ Choose **[color]** between :
 - Press Esc to close the program
 - You can change the parameter of the Julia set by pressing L and moving the mouse. Press L again to lock it.
 
+## Example 
+
+Some results you can observe :
+
+![fractol](https://github.com/anonylouis/42Project---fractol/blob/main/fractol.png)
+
+
 ---
 The graphics librairy used is the [minilibx](https://github.com/42Paris/minilibx-linux)
 
