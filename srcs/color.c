@@ -6,13 +6,13 @@
 /*   By: lcalvie <lcalvie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 13:29:20 by lcalvie           #+#    #+#             */
-/*   Updated: 2021/12/31 19:29:27 by lcalvie          ###   ########.fr       */
+/*   Updated: 2022/11/08 12:19:56 by lcalvie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-static void	rgb_to_hexa(char color[7], int r, int g, int b)
+static void	rgb_to_hexa(char color[8], int r, int g, int b)
 {
 	color[0] = '#';
 	color[1] = HEXA[r / 16];
@@ -21,9 +21,10 @@ static void	rgb_to_hexa(char color[7], int r, int g, int b)
 	color[4] = HEXA[g % 16];
 	color[5] = HEXA[b / 16];
 	color[6] = HEXA[b % 16];
+	color[7] = '\0';
 }
 
-void	fill_color_tab_rainbow(char color[27][7])
+void	fill_color_tab_rainbow(char color[27][8])
 {
 	int	r;
 	int	g;
@@ -52,7 +53,7 @@ void	fill_color_tab_rainbow(char color[27][7])
 	rgb_to_hexa((color)[26], 255, 255, 255);
 }
 
-void	fill_color_tab_blue(char color[27][7])
+void	fill_color_tab_blue(char color[27][8])
 {
 	int	r;
 	int	g;
@@ -80,7 +81,7 @@ void	fill_color_tab_blue(char color[27][7])
 	rgb_to_hexa((color)[26], 255, 255, 255);
 }
 
-void	fill_color_tab_red(char color[27][7])
+void	fill_color_tab_red(char color[27][8])
 {
 	int	r;
 	int	g;
@@ -101,7 +102,7 @@ void	fill_color_tab_red(char color[27][7])
 	rgb_to_hexa((color)[26], 255, 0, 0);
 }
 
-void	fill_color_tab_random(char color[27][7])
+void	fill_color_tab_random(char color[27][8])
 {
 	int		fd;
 	int		i;
@@ -133,7 +134,7 @@ int main()
 	//int fd = open("julia.xpm", O_CREAT | O_WRONLY | O_TRUNC);
 	//append_color_to_xpm(graph->color, fd);
 
-	char	color[27][7];
+	char	color[27][8];
 	fill_color_tab_random(color);
 	return(0);
 }*/

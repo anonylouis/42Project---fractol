@@ -6,7 +6,7 @@
 /*   By: lcalvie <lcalvie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 16:12:12 by lcalvie           #+#    #+#             */
-/*   Updated: 2022/01/04 11:41:58 by lcalvie          ###   ########.fr       */
+/*   Updated: 2022/11/08 12:19:13 by lcalvie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef struct s_graph
 	double		xmin;
 	double		ymax;
 	double		ymin;
-	char		color[27][7];
+	char		color[27][8];
 	t_complex	*c;
 	int			img_height;
 	int			img_width;

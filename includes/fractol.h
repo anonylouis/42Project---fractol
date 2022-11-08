@@ -6,7 +6,7 @@
 /*   By: lcalvie <lcalvie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 16:58:48 by lcalvie           #+#    #+#             */
-/*   Updated: 2022/01/04 12:08:52 by lcalvie          ###   ########.fr       */
+/*   Updated: 2022/11/08 12:19:56 by lcalvie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,16 +36,17 @@
 # define COLORXPM "ABCDEFGHIJKLMNOPQRSTUVWXYZ."
 
 //COLOR
-void	fill_color_tab_blue(char color[27][7]);
-void	fill_color_tab_rainbow(char color[27][7]);
-void	fill_color_tab_red(char color[27][7]);
-void	fill_color_tab_random(char color[27][7]);
+void	fill_color_tab_blue(char color[27][8]);
+void	fill_color_tab_rainbow(char color[27][8]);
+void	fill_color_tab_red(char color[27][8]);
+void	fill_color_tab_random(char color[27][8]);
 
 //HOOK
 int		keycatch(int keycode, t_graph *graph);
 int		mousecatch(int mousecode, int x, int y, t_graph *graph);
 int		mousemoved(t_graph *graph);
 int		movegraph(t_graph *graph, int keycode);
+int		close_loop(t_graph *graph);
 
 //FRACTAL
 int		generate_julia_img(t_graph *graph);
@@ -59,7 +60,7 @@ void	ft_putnbr_fd(int n, int fd);
 
 //XPM
 void	apprend_header_to_xpm(int fd);
-void	append_color_to_xpm(char color[26][7], int fd);
+void	append_color_to_xpm(char color[26][8], int fd);
 void	apprend_line_to_xpm(int n, char line[WIDTH], int fd);
 
 //ARGUMENTS

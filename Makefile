@@ -1,6 +1,6 @@
 CC = gcc
 
-FLAGS = -Wall -Wextra -Werror # -g3 -fsanitize=address
+FLAGS = -Wall -Wextra -Werror -g3 #-fsanitize=address
 
 FLAGS_MINILIBX = -L/user/include/../lib -lXext -lX11 -lm 
 MINILIBX= minilibx/libmlx_Linux.a
@@ -34,6 +34,6 @@ makeminilibx :
 		$(MAKE) -C minilibx/ all
 
 ./srcs/%.o :	./srcs/%.c
-				$(CC) $(FLAGS) -I $(HEADER) -o $@ -c $< $(MINILIBX) $(FLAGS_MINILIBX) 
+				$(CC) $(FLAGS) -I $(HEADER) -o $@ -c $< 
 
 .PHONY : all re clean fclean makeminilibx

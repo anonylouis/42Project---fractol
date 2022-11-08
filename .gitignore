@@ -1,2 +1,3 @@
-./srcs/*.o
-./fractol
+srcs/*.o
+fractol
+

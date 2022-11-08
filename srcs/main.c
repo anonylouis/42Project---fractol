@@ -6,7 +6,7 @@
 /*   By: lcalvie <lcalvie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 16:58:51 by lcalvie           #+#    #+#             */
-/*   Updated: 2022/01/04 12:10:04 by lcalvie          ###   ########.fr       */
+/*   Updated: 2022/11/08 12:20:31 by lcalvie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	main(int argc, char **argv)
 		graph = new_graph("wrong", "argument", 0, 0);
 	if (graph && img_to_screen(graph))
 	{
+		mlx_hook(graph->win_ptr, 33, 1L << 17, close_loop, graph);
 		mlx_key_hook(graph->win_ptr, keycatch, graph);
 		mlx_mouse_hook(graph->win_ptr, mousecatch, graph);
 		mlx_loop_hook(graph->mlx_ptr, mousemoved, graph);

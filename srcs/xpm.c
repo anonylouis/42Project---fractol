@@ -6,7 +6,7 @@
 /*   By: lcalvie <lcalvie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 18:24:40 by lcalvie           #+#    #+#             */
-/*   Updated: 2021/12/31 19:15:17 by lcalvie          ###   ########.fr       */
+/*   Updated: 2022/11/08 12:20:49 by lcalvie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	apprend_header_to_xpm(int fd)
 	ft_putstr_fd(" 27 1 \",\n", fd);
 }
 
-void	append_color_to_xpm(char color[26][7], int fd)
+void	append_color_to_xpm(char color[26][8], int fd)
 {
 	int		i;
 

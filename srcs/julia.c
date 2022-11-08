@@ -6,7 +6,7 @@
 /*   By: lcalvie <lcalvie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 17:01:58 by lcalvie           #+#    #+#             */
-/*   Updated: 2021/12/31 19:30:01 by lcalvie          ###   ########.fr       */
+/*   Updated: 2022/11/08 12:15:16 by lcalvie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,10 @@ int	generate_julia_img(t_graph *graph)
 		return (0);
 	z = new_complex(0, 0);
 	if (z == NULL)
+	{
+		close(fd);
 		return (0);
+	}
 	write_julia_xpm(graph, fd, z);
 	close(fd);
 	free(z);

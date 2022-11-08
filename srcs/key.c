@@ -6,11 +6,17 @@
 /*   By: lcalvie <lcalvie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 16:04:06 by lcalvie           #+#    #+#             */
-/*   Updated: 2021/12/31 19:08:42 by lcalvie          ###   ########.fr       */
+/*   Updated: 2022/11/08 11:58:10 by lcalvie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
+
+int	close_loop(t_graph *graph)
+{
+	mlx_loop_end(graph->mlx_ptr);
+	return (0);
+}
 
 int	keycatch(int keycode, t_graph *graph)
 {

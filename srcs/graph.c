@@ -6,13 +6,13 @@
 /*   By: lcalvie <lcalvie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 16:14:47 by lcalvie           #+#    #+#             */
-/*   Updated: 2022/11/02 19:16:39 by lcalvie          ###   ########.fr       */
+/*   Updated: 2022/11/08 12:19:56 by lcalvie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	display_graph_color_tab(char color[27][7], char *strColor)
+void	display_graph_color_tab(char color[27][8], char *strColor)
 {
 	if (ft_strcmp(strColor, "BLUE") == 0)
 		fill_color_tab_blue(color);
@@ -76,6 +76,7 @@ t_graph	*new_graph(char *strFractalType, char *strColor, double x, double y)
 	graph->xmin = -2;
 	graph->ymax = 2;
 	graph->ymin = -2;
+	graph->moved = 0;
 	display_graph_color_tab(graph->color, strColor);
 	display_graph_fractal_type(graph, strFractalType, x, y);
 	return (graph);
