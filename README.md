@@ -23,7 +23,7 @@ Choose **[color]** between :
 
 - You can move with the arrows
 - You can zoom with the mouse wheels
-- Press Esc to close the program
+- Press Esc or click on the red cross to close the program
 - You can change the parameter of the Julia set by pressing L and moving the mouse. Press L again to lock it.
 
 ## Example 
